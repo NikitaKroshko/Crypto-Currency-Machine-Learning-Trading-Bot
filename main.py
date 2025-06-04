@@ -1,3 +1,3 @@
 import data
 
-print(current_statistics("BTCUSDT"))
+print(data.current_statistics("BNBUSDT"))

@@ -6,7 +6,11 @@ socket = "wss://stream.binance.com:9443/stream?streams="
 
 def current_statistics(ticker):
     asset = ticker.lower() + "@kline_1m"
+    socket_msg = socket+asset
+    ws = websocket.WebSocketApp(socket_msg, on_message=on_message)
+    ws.run_forever()
 
 def on_message(ws,message):
-    return json.loads(message)
+    message = json.loads(message)
+    print(message)
 
