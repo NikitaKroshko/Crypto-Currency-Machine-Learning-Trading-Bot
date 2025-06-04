@@ -3,6 +3,7 @@ import websocket
 import pandas as pd
 
 socket = "wss://stream.binance.com:9443/stream?streams="
+data = []
 
 def current_statistics(ticker):
     asset = ticker.lower() + "@kline_1m"
@@ -12,5 +13,6 @@ def current_statistics(ticker):
 
 def on_message(ws,message):
     message = json.loads(message)
-    print(message)
+    data.append(message)
+    print(len(data))
 
