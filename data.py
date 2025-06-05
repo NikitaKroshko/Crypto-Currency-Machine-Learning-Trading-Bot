@@ -1,6 +1,7 @@
 import json
 import websocket
 import pandas as pd
+import time
 
 socket = "wss://stream.binance.com:9443/stream?streams="
 data = []
@@ -27,4 +28,15 @@ def parallel_current_statistics(tickers):
     ws = websocket.WebSocketApp(socket_msg, on_message=on_message)
     ws.run_forever()
 
-
+def parallel_current_statistics(tickers, duration):
+    # Same principle as for the current statistics but this takes a list of tickers and returns data for all of them
+    assets = []
+    for asset in tickers:
+        assets.append(asset.lower() + "@kline_1m")
+    socket_msg = socket+("/".join(assets))
+    ws = websocket.WebSocketApp(socket_msg, on_message=on_message)
+    ws_thread = threading.Thread(target=ws.run_forever)
+    ws_thread.start()
+    time.sleep(duration)
+    ws.close()
+    ws_thread.join()
