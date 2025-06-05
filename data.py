@@ -2,6 +2,7 @@ import json
 import websocket
 import pandas as pd
 import time
+import threading
 
 socket = "wss://stream.binance.com:9443/stream?streams="
 data = []
