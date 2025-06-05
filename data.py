@@ -17,3 +17,6 @@ def on_message(ws,message):
     print(len(data))
 
 def parallel_current_statistics(tickers):
+    for ticker in tickers:
+        current_statistics(ticker)
+
