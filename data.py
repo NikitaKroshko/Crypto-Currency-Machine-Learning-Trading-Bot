@@ -17,6 +17,11 @@ def on_message(ws,message):
     print(len(data))
 
 def parallel_current_statistics(tickers):
-    for ticker in tickers:
-        current_statistics(ticker)
+    assets = []
+    for asset in tickers:
+        assets.append(ticker.lower() + "@kline_1m")
+    socket_msg = socket+asset
+    ws = websocket.WebSocketApp(socket_msg, on_message=on_message)
+    ws.run_forever()
+
 
