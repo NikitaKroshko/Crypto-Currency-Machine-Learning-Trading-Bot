@@ -1,4 +1,4 @@
 import data
 
-print(data.current_statistics("BNBUSDT"))
+print(data.parallel_current_statistics(["BNBUSDT", "BTCUSDT", "ETHUSDT"]))
 print(data.data)
