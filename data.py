@@ -13,6 +13,7 @@ def current_statistics(ticker):
     ws.run_forever()
 
 def on_message(ws,message):
+    # Message handler for the websocket
     message = json.loads(message)
     data.append(message)
     print(len(data))
