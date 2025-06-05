@@ -20,7 +20,7 @@ def parallel_current_statistics(tickers):
     assets = []
     for asset in tickers:
         assets.append(ticker.lower() + "@kline_1m")
-    socket_msg = socket+asset
+    socket_msg = socket+(assets.join("/"))
     ws = websocket.WebSocketApp(socket_msg, on_message=on_message)
     ws.run_forever()
 
