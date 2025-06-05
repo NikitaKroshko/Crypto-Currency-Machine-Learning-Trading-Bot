@@ -12,5 +12,7 @@ def save_data(tickers,filename, time = 1):
 tickers = input("Which tickers do you want to track (split by ,): ")
 input_list = tickers.split(",")
 filename = input("Name of the file you want the tickers to be stored into: ")
+time = int(input("Enter the length of time you want the tickers to be tracker for: "))
+save_data(input_list, filename, time)
 
 
