@@ -4,6 +4,7 @@ import time
 def save_data(tickers,filename, duration = 1):
     # Takes as an input tickers in a list, filename as a string, and durtaion as an int
     # Runs the ticker data collection for duration minutes
+    # Saves it to the filename file
     with open(filename, "w") as file:
         t = 60 * duration 
         data.parallel_current_statistics(tickers, t)
