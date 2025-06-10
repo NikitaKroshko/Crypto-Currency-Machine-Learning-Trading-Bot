@@ -17,3 +17,9 @@ def populate_df_from_file(file_path):
         json_data = json.load(file)
         df = pd.read_json(json_data)
     return df
+
+def simple_statistics():
+    global df
+    if df is None:
+        raise ValueError("DataFrame is not populated.")
+    return df.describe()
