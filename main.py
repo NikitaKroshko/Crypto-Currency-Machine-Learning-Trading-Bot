@@ -11,10 +11,10 @@ def save_data(tickers, filename, duration = 1):
         file.writelines(str(data.data))
 
 def run_from_terminal():
-tickers = input("Which tickers do you want to track (split by ,): ")
-input_list = tickers.split(",")
-filename = input("Name of the file you want the tickers to be stored into: ")
-duration = int(input("Enter the length of time you want the tickers to be tracker for: "))
-save_data(input_list, filename, duration)
+    tickers = input("Which tickers do you want to track (split by ,): ")
+    input_list = tickers.split(",")
+    filename = input("Name of the file you want the tickers to be stored into: ")
+    duration = int(input("Enter the length of time you want the tickers to be tracker for: "))
+    save_data(input_list, filename, duration)
 
 
