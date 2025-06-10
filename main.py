@@ -10,6 +10,7 @@ def save_data(tickers, filename, duration = 1):
         data.parallel_current_statistics(tickers, t)
         file.writelines(str(data.data))
 
+def run_from_terminal():
 tickers = input("Which tickers do you want to track (split by ,): ")
 input_list = tickers.split(",")
 filename = input("Name of the file you want the tickers to be stored into: ")
