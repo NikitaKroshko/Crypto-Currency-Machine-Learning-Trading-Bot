@@ -17,4 +17,6 @@ def run_from_terminal():
     duration = int(input("Enter the length of time you want the tickers to be tracker for: "))
     save_data(input_list, filename, duration)
 
+run_from_terminal()
+
 
