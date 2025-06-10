@@ -10,3 +10,10 @@ def populate_df():
     global df
     df = pd.read_json(json_data)
     return df
+
+def populate_df_from_file(file_path):
+    global df
+    with open(file_path, 'r') as file:
+        json_data = json.load(file)
+        df = pd.read_json(json_data)
+    return df
