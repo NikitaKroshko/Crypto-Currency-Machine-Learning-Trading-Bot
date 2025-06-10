@@ -1,4 +1,5 @@
 import data
+import analyze
 import time
 
 def save_data(tickers, filename, duration = 1):
@@ -6,7 +7,7 @@ def save_data(tickers, filename, duration = 1):
     # Runs the ticker data collection for duration minutes
     # Saves it to the filename file
     with open(filename, "w") as file:
-        t = 60 * duration 
+        t = 60 * duration
         data.parallel_current_statistics(tickers, t)
         file.writelines(str(data.data))
 
@@ -19,5 +20,4 @@ def run_from_terminal():
     save_data(input_list, filename, duration)
 
 run_from_terminal()
-
-
+analyze.populate_df()
