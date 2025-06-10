@@ -21,3 +21,4 @@ def run_from_terminal():
 
 run_from_terminal()
 analyze.populate_df()
+print(analyze.simple_statistics())
