@@ -15,6 +15,8 @@ def populate_df():
     return df
 
 def populate_df_from_file(file_path):
+    # Take data in from the file_path and produces a dataframe
+    # object in the df global file variable.
     global df
     with open(file_path, 'r') as file:
         json_data = json.load(file)
