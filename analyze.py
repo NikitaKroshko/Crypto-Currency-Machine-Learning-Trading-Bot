@@ -6,6 +6,8 @@ import data
 df = None
 
 def populate_df():
+    # Take data in from the data.data array and produces a dataframe
+    # object in the df global file variable.
     df_data = data.data
     json_data = json.dumps(df_data)
     global df
