@@ -24,6 +24,7 @@ def populate_df_from_file(file_path):
     return df
 
 def simple_statistics():
+    # Returns a dataframe with simple statistics about the data in the df global file variable.
     global df
     if df is None:
         raise ValueError("DataFrame is not populated.")
