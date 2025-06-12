@@ -29,3 +29,5 @@ def simple_statistics():
     if df is None:
         raise ValueError("DataFrame is not populated.")
     return df.describe()
+
+def mean(column_name):
