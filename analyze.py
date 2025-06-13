@@ -30,4 +30,5 @@ def simple_statistics():
         raise ValueError("DataFrame is not populated.")
     return df.describe()
 
-def mean(column_name):
+def mean(column_name, ticker_symbol):
+#
