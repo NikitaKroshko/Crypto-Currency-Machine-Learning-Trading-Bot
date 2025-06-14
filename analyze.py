@@ -31,7 +31,8 @@ def simple_statistics():
     return df.describe()
 
 def mean(column_name, ticker_symbol):
-    # Returns the mean value of the specified column for the specified ticker symbol.
+    # Returns the men value of the specified column for the specified ticker symbol.
+    #
     global df
     if df is None:
         raise ValueError("DataFrame is not populated.")
