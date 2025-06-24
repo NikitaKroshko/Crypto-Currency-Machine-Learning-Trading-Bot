@@ -37,3 +37,10 @@ def mean(column_name, ticker_symbol):
     if df is None:
         raise ValueError("DataFrame is not populated.")
     return df[df['ticker'] == ticker_symbol][column_name].mean()
+
+def median(column_name, ticker_symbol):
+    global df
+    if df is None:
+        raise ValueError("DataFrame is not populated.")
+    filtered_data = df[df['ticker'] == ticker_symbol][column_name]
+    return np.median(filtered_data)
