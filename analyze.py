@@ -39,6 +39,8 @@ def mean(column_name, ticker_symbol):
     return df[df['ticker'] == ticker_symbol][column_name].mean()
 
 def median(column_name, ticker_symbol):
+    # Returns the median value of the specified column
+    # for the specified ticker symbol.
     global df
     if df is None:
         raise ValueError("DataFrame is not populated.")
