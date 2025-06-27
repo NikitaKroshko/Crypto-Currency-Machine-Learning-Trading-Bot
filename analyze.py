@@ -49,6 +49,8 @@ def median(column_name, ticker_symbol):
 
 
 def mode(column_name, ticker_symbol):
+    # Returns the mode value of the specified column
+    # for the specified ticker symbol.
     global df
     if df is None:
         raise ValueError("DataFrame is not populated.")
