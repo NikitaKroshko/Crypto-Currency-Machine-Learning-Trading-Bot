@@ -13,3 +13,6 @@ def display_analyzed_data():
 def display_mean(column, ticker):
     # Basic print out of the mean of the column for the ticker
     print(analyze.mean(column, ticker))
+
+def display_mode(column, ticker):
+    print(analyze.mode(column, ticker))
