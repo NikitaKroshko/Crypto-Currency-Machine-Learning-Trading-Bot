@@ -29,7 +29,7 @@ def parallel_current_statistics(tickers):
     ws = websocket.WebSocketApp(socket_msg, on_message=on_message)
     ws.run_forever()
 
-def parallel_current_statistics(tickers, duration):
+def parallel_current_statistics_duration(tickers, duration):
     # Same principle as for the current statistics but this takes a list of tickers and returns data for all of them
     assets = []
     for asset in tickers:
