@@ -21,5 +21,6 @@ def run_from_terminal():
 
 # Code for running the main file
 run_from_terminal()
+# Use the function from the analyze file
 analyze.populate_df()
 print(analyze.simple_statistics())
