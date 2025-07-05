@@ -1,5 +1,6 @@
 import data
 import analyze
+import display
 import time
 
 def save_data(tickers, filename, duration = 1):
