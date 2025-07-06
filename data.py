@@ -1,3 +1,4 @@
+# This is a supporting file for main.py
 import json
 import websocket
 import pandas as pd
