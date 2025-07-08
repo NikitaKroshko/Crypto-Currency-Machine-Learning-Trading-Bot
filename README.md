@@ -15,3 +15,15 @@ Key features include:
 - **Threaded execution**: Uses threading to enable non-blocking data collection with time constraints
 
 The module maintains a persistent connection to the Binance stream endpoint and populates a data array with incoming market information, which can then be processed by other components of the trading system for analysis and decision-making.
+
+The display.py module functions as the presentation layer of the trading bot, providing various output methods to visualize collected data and analysis results. This supporting module works in conjunction with main.py to present information to users in a readable format.
+
+Key features include:
+- **Raw data output**: `display_data()` function prints the unprocessed cryptocurrency data collected from the WebSocket streams
+- **Analyzed data presentation**: `display_analyzed_data()` function outputs the processed DataFrame containing analyzed market information
+- **Statistical displays**: Dedicated functions for showing calculated statistics:
+  - `display_mean()` - displays the mean value for a specified column and ticker symbol
+  - `display_mode()` - displays the mode value for a specified column and ticker symbol
+- **Modular design**: Each display function is focused on a specific type of output, making the code maintainable and extensible
+
+The module serves as an interface between the data processing components (data.py and analyze.py) and the user, ensuring that complex market data and statistical analysis results are presented in an accessible format. This separation of concerns allows for easy modification of output formats without affecting the core data collection and analysis functionality.
