@@ -1,8 +1,17 @@
 # Crypto-Currency-Machine-Learning-Trading-Bot
 
-This is a machine learning trading bot that learns based on previous data and gives call signs for buying and selling different crypto currencies. In the future there are plans to expand this into also working with the stock market.
+This machine learning trading bot serves as an intelligent cryptocurrency trading system that analyzes historical market data to generate buy and sell signals for various cryptocurrency pairs. The system utilizes advanced machine learning algorithms to identify patterns and trends in market behavior, providing automated trading recommendations. Future development plans include expanding functionality to support traditional stock market analysis and trading.
 
-It has a main.py file that imports the necessary modules (data, analyze, display, and time) and contains two main functions: save_data() for collecting ticker data over a specified duration and saving it to a file, and run_from_terminal() which prompts the user for ticker symbols, filename, and tracking duration. The main execution flow runs the terminal interface, populates the dataframe using the analyze module, and prints basic statistical analysis.
+The main.py module functions as the central orchestration component of the trading bot, coordinating between data collection, analysis, and display modules to provide a comprehensive trading interface. This core module manages the primary execution flow and user interaction components of the system.
+
+Key features include:
+- **Data persistence**: `save_data()` function collects ticker data over specified time periods and saves it to persistent storage files
+- **Terminal interface**: `run_from_terminal()` function provides interactive command-line interface for user input of ticker symbols, filenames, and tracking duration parameters
+- **Module coordination**: Imports and manages necessary modules (data, analyze, display, and time) for seamless system operation
+- **Statistical workflow**: Orchestrates the complete data processing pipeline from collection through analysis to statistical output
+- **User interaction**: Handles user prompts and input validation for trading pair selection and monitoring parameters
+
+The module serves as the primary entry point for the trading system, managing the complete workflow from data collection initiation through final statistical analysis presentation.
 
 The data.py module serves as the core data collection component of the trading bot, responsible for gathering real-time cryptocurrency market data from the Binance WebSocket API. This module establishes connections to live market streams and continuously collects 1-minute candlestick (kline) data for specified cryptocurrency trading pairs.
 
