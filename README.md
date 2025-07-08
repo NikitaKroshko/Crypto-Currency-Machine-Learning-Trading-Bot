@@ -27,3 +27,18 @@ Key features include:
 - **Modular design**: Each display function is focused on a specific type of output, making the code maintainable and extensible
 
 The module serves as an interface between the data processing components (data.py and analyze.py) and the user, ensuring that complex market data and statistical analysis results are presented in an accessible format. This separation of concerns allows for easy modification of output formats without affecting the core data collection and analysis functionality.
+
+The analyze.py module serves as the analytical engine of the trading bot, responsible for processing and analyzing the cryptocurrency market data collected by the data module. This supporting module transforms raw WebSocket data into structured DataFrames and provides comprehensive statistical analysis capabilities for informed trading decisions.
+
+Key features include:
+- **Data transformation**: `populate_df()` function converts raw data from the global data array into a structured pandas DataFrame
+- **File-based data loading**: `populate_df_from_file()` function loads previously saved market data from JSON files for analysis
+- **Comprehensive statistics**: `simple_statistics()` function provides detailed statistical summaries using pandas' describe() method
+- **Targeted statistical analysis**: Individual functions for specific statistical measures:
+  - `mean()` - calculates mean values for specified columns and ticker symbols
+  - `median()` - computes median values for specified columns and ticker symbols
+  - `mode()` - determines mode values for specified columns and ticker symbols
+- **Global DataFrame management**: Maintains a global DataFrame variable for efficient data access across functions
+- **Error handling**: Includes validation to ensure DataFrame is populated before performing analysis
+
+The module acts as a bridge between raw market data collection and meaningful statistical insights, utilizing scientific computing libraries (NumPy, pandas, SciPy) to perform robust mathematical analysis. This processed information forms the foundation for the machine learning components and trading decision algorithms within the broader trading bot ecosystem.
