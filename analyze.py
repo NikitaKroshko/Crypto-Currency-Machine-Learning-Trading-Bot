@@ -1,4 +1,5 @@
-# This is a supporting file for main.py
+# This is a supporting file for main.pypropert
+# This file has functions which analyze the data that is collected from data.data
 import numpy as np
 import pandas as pd
 from scipy import stats
