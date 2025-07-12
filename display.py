@@ -18,3 +18,7 @@ def display_mean(column, ticker):
 def display_mode(column, ticker):
     # Basic print out of the mode of the column for the ticker
     print(analyze.mode(column, ticker))
+
+def display_median(column, ticker):
+    # Basic print out of the median of the column for the ticker
+    print(analyze.median(column, ticker))
