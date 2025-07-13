@@ -40,3 +40,5 @@ def main():
     print("Displaying median")
     display_median("price", "BTCUSDT")
     print("############")
+
+main()
