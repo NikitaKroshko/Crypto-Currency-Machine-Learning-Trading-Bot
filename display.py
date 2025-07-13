@@ -24,8 +24,15 @@ def display_median(column, ticker):
     print(analyze.median(column, ticker))
 
 def main():
+    print("############")
+    print("Displaying data")
     display_data()
+    print("############")
     display_analyzed_data()
+    print("############")
     display_mean("price", "BTCUSDT")
+    print("############")
     display_mode("price", "BTCUSDT")
+    print("############")
     display_median("price", "BTCUSDT")
+    print("############")
