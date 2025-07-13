@@ -26,6 +26,6 @@ def display_median(column, ticker):
 def main():
     display_data()
     display_analyzed_data()
-    display_mean('price', 'BTC')
-    display_mode('price', 'BTC')
-    display_median('price', 'BTC')
+    display_mean("price", "BTCUSDT")
+    display_mode("price", "BTCUSDT")
+    display_median("price", "BTCUSDT")
