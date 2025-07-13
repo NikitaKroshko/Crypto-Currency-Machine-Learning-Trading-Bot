@@ -22,3 +22,10 @@ def display_mode(column, ticker):
 def display_median(column, ticker):
     # Basic print out of the median of the column for the ticker
     print(analyze.median(column, ticker))
+
+def main():
+    display_data()
+    display_analyzed_data()
+    display_mean('price', 'BTC')
+    display_mode('price', 'BTC')
+    display_median('price', 'BTC')
