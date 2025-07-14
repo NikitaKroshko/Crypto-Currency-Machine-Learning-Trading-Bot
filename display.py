@@ -41,4 +41,5 @@ def main():
     display_median("price", "BTCUSDT")
     print("############")
 
+# Run the main function to display btc usdt data
 main()
