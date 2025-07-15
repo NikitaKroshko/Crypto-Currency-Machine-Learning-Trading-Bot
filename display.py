@@ -24,6 +24,7 @@ def display_median(column, ticker):
     print(analyze.median(column, ticker))
 
 def main():
+    # This function displays the data for the ticker of btcusdt this is for simple testing purposes
     print("############")
     print("Displaying data")
     display_data()
