@@ -1,3 +1,14 @@
 # This is a file describing how to use this project
 
 ## About
+
+This project is a cryptocurrency trading system that leverages machine learning algorithms to analyze market data and make informed trading decisions. The system uses various ML techniques to identify patterns in cryptocurrency price movements, volume trends, and other market indicators to predict optimal buy and sell opportunities.
+
+Key features include:
+- Real-time market data analysis
+- Multiple machine learning models for price prediction
+- Automated trading execution
+- Risk management and portfolio optimization
+- Backtesting capabilities for strategy validation
+
+The goal is to create a robust, data-driven approach to cryptocurrency trading that can adapt to changing market conditions and maximize returns while minimizing risk.
